@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+  	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+  	<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+  	<property name="username" value="hr"/>
+  	<property name="password" value="1234"/>
+  </bean>
+  
+  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+  	<property name="dataSource" ref="dataSource"/>
+  	<property name="configLocation" value="classpath:mapper/Mybatis-config.xml"/>
+  	<property name="mapperLocations" value="classpath:mapper/**/*Mapper*.xml"/>
+  </bean>
+  
+  <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+  	<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+  </bean>
+  
+  <bean id="connectionTest" class="mybatisExam.ConnectionTest">
+  	<constructor-arg ref="sqlSession"/>
+  </bean>
+  
+   <bean id="test1" class="mybatisExam.Test1">
+  	<constructor-arg ref="sqlSession"/>
+  </bean>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="tv" class="polymorphism.SamsungTV">
+<!-- 매개변수가 2개짜리라인 객체를 생성한다면 -> 매개변수 2개짜리인 생성자 호출 -->
+	<constructor-arg ref="Apple"></constructor-arg>
+	<constructor-arg value="270000"></constructor-arg><!-- 값을 넣을때는 value -->
+	
+</bean>
+
+<bean id="sony" class="polymorphism.SonySpeaker"/>
+<bean id="mirim" class="polymorphism.mirimSpeaker"/>
+<bean id="Apple" class="polymorphism.AppleSpeaker"/>
+</beans>

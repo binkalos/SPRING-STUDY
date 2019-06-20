@@ -1,0 +1,9 @@
+private SqlSession sqlSession;
+		
+		public Test1(SqlSwssion sqlSession) {
+			this.sqlSession = sqlSession;
+		}
+		public void selectone() {
+			int count = sqlSession.selectOne("exam.test.SingerMapper.getsingercount");
+			System.out.println("±×·ì¼ö:" + count);
+		}

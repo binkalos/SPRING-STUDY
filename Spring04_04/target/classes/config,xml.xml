@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+<!-- 1.생성자 주입방식
+<bean id="tv_temp" class="polymorphism.SamsungTV">
+ 매개변수가 2개짜리라인 객체를 생성한다면 > 매개변수 2개짜리인 생성자 호출
+	<constructor-arg ref="Apple"></constructor-arg>
+	<constructor-arg value="270000"></constructor-arg> 값을 넣을때는 value 
+
+</bean>
+  -->
+
+<!--2.setter주입방식
+<bean id="tv" class="polymorphism.SamsungTV">
+	<property name="speaker" ref="Apple"></property>
+	<property name="price" value="50"></property>
+</bean>
+-->
+
+<!-- 3.setter 인잭션을 설정할 때 p네임스페이스를 이용하여 의존성 주입을 처리 할 수 있다. -->
+<!--
+<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2444" />
+
+
+<bean id="sony" class="polymorphism.SonySpeaker"/>
+<bean id="mirim" class="polymorphism.mirimSpeaker"/>
+<bean id="Apple" class="polymorphism.AppleSpeaker"/>
+ -->
+ <!-- 4.컨포넌트 스캔 설정을 통해 주입하는 방식 -->
+ <context:component-scan base-package="polymorphism">
+  </context:component-scan>
+ <!--<bean class="polymorphism.SonySpeaker"></bean>
+  -->
+</beans>

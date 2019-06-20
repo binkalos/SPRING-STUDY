@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="exam.test.SingerMapper">
+	<select id="getSingerCount" resultType="int">
+	select count(*) from member
+	</select>
+	<select id="getSingerMember" resultType="int">
+		select member from member where name=#{name}
+	</select>
+	<select id="getStringMember2" resultType="String">
+		select name from member where member=#{member}
+	</select>
+	<select id="getsingerNameMember" resultType="String">
+		select name from member where member=#{member}and name=#{name}
+	</select>
+	<select id="getSinger" resultType="mybatis.Singer">
+	select * from member where member=#{member} and name=#{name}
+	</select>
+	<select id="insertSinger">
+	insert into member(name,member) values (#{name},#{member})
+	</select>
+	<select id="getSingers" resultType="mybatis.Singer">
+	select * from member where member=#{member}
+	</select>
+	<select id="updateSinger">
+	update member set member=#{member} where name=#{name}
+	</select>
+	<select id="deleteSinger">
+	delete from member where name=#{name}
+	</select>
+</mapper>

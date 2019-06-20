@@ -1,0 +1,8 @@
+package com.my.ex;
+
+public class StudentInformation {
+	private String name;
+	private String age;
+	private String gradeNum;
+	private String classNum;
+}

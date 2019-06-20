@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\Users\Mirim\Documents\workspace-sts-3.9.7.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\705034340.index
+\Spring06_13\src\main\java
+C:\Users\Mirim\Documents\workspace-sts-3.9.7.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\399421097.index
+\Spring06_13\src\main\java
+C:\Users\Mirim\Documents\workspace-sts-3.9.7.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\668824688.index
+\Test\src\main\java
+C:\Users\Mirim\Documents\workspace-sts-3.9.7.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2739505210.index
+\Spring06_13\src\main\java
+C:\Users\Mirim\Documents\workspace-sts-3.9.7.RELEASE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1145271717.index
+\Spring06_13\src\main\java

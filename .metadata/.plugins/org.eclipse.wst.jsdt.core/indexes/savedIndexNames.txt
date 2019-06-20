@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\Users\Mirim\Documents\workspace-sts-3.9.7.RELEASE\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1657330681.index
+3761547028.index
+525145126.index
+595038891.index
+3964084287.index
+100359933.index
+1237667320.index
+399421097.index
